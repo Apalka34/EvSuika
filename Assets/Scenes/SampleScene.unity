@@ -310,7 +310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextFruitImage: {fileID: 713684548}
-  fruitManager: {fileID: 1478124262}
 --- !u!1 &172380759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1005,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 568954845}
+  - {fileID: 1102736570}
   - {fileID: 1443923116}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1182,7 +1182,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 2.94, z: 0}
+  - {x: 0, y: 2.4, z: 0}
   - {x: 0, y: -3.75, z: 0}
   m_Parameters:
     serializedVersion: 3
@@ -1607,6 +1607,63 @@ MonoBehaviour:
   _moveSpeed: 5
   _boundaries: {fileID: 1398743412}
   _fruitThrowTransform: {fileID: 1478124261}
+--- !u!1 &1102736569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1102736570}
+  - component: {fileID: 1102736571}
+  m_Layer: 0
+  m_Name: Fruit Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1102736570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102736569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 784473830}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1102736571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102736569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340bcbb6a99352d4d9d952195ecbafd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleFruits:
+  - {fileID: 5125279671173502283, guid: ad2a571ee867b1d4e93aed4fbe6d4aa9, type: 3}
+  - {fileID: -6741611299907523453, guid: 1bb003348153f2e48ac9968a1fad77a8, type: 3}
+  - {fileID: -3634592346356079348, guid: 2dce905faf5a6a74fb0ca37ead0b88d7, type: 3}
+  - {fileID: 381895824919692512, guid: 1f4cf76e277e9b94fac8bf98ccfdef98, type: 3}
+  - {fileID: 1943134355332798881, guid: be0e7ff351a13e74090bae6aa1729fb1, type: 3}
+  - {fileID: -1527038652652445764, guid: 55fc4c650ad11664898e06748f4fff6b, type: 3}
+  - {fileID: -2763604515211787958, guid: 27fd1f7a0ef19df448f5d10786ff4344, type: 3}
+  - {fileID: 626425998542661143, guid: b31725832cd791e41afb051b4619141a, type: 3}
+  - {fileID: 8108305942085516877, guid: 9680fca13b5a3af47a640a446aec01ef, type: 3}
+  - {fileID: -2354471299776001079, guid: bdd73243e60590c4e991f5b088fecdf2, type: 3}
+  - {fileID: 8003483232210100409, guid: 582d1a6b17c2a4d43826549ef51a5726, type: 3}
+  - {fileID: 8899776830471004300, guid: 09d2335c3d4a5c6418a22e68f17f7e92, type: 3}
 --- !u!1 &1169719910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2529,7 @@ Transform:
   m_GameObject: {fileID: 1478124260}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.94, z: 0}
+  m_LocalPosition: {x: 0, y: 2.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2490,22 +2547,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a231e5ed7b47fe409142c66a1acd7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextFruitsUI: {fileID: 141013496}
+  nextFruitUI: {fileID: 141013496}
   heldFruitParent: {fileID: 1039842931}
   droppedFruitParent: {fileID: 1443923116}
-  fruits:
-  - {fileID: 5125279671173502283, guid: ad2a571ee867b1d4e93aed4fbe6d4aa9, type: 3}
-  - {fileID: -6741611299907523453, guid: 1bb003348153f2e48ac9968a1fad77a8, type: 3}
-  - {fileID: -3634592346356079348, guid: 2dce905faf5a6a74fb0ca37ead0b88d7, type: 3}
-  - {fileID: 381895824919692512, guid: 1f4cf76e277e9b94fac8bf98ccfdef98, type: 3}
-  - {fileID: 1943134355332798881, guid: be0e7ff351a13e74090bae6aa1729fb1, type: 3}
+  maxBaseFruitIndex: 3
   heldFruit: {fileID: 0}
-  nextFruits:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  nextFruit: {fileID: 0}
 --- !u!1 &1598476291
 GameObject:
   m_ObjectHideFlags: 0
