@@ -3,7 +3,7 @@ guid: 0c2a1b05d4621984f94b5426ae50bcf3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
@@ -122,7 +135,17 @@ TextureImporter:
       - {x: 20, y: -24}
       - {x: 22, y: -20}
       - {x: 22, y: 2}
-    physicsShape: []
+    physicsShape:
+    - - {x: 4, y: 28}
+      - {x: -6, y: 28}
+      - {x: -22, y: 4}
+      - {x: -22, y: -18}
+      - {x: -14, y: -28}
+      - {x: -6, y: -32}
+      - {x: 10, y: -32}
+      - {x: 16, y: -28}
+      - {x: 22, y: -20}
+      - {x: 22, y: 4}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 1537655665
